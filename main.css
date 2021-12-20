@@ -1,0 +1,674 @@
+/* ------------------------
+TABLE OF CONTENTS
+
+ Variables
+    a_Colors
+    b_Dimensions & interaction
+ Quick settings
+ Fonts
+ Header 
+ Section: aboutTheArtist
+ Section: allProducts 
+ Section: aboutCats 
+ Footer
+ Media Query
+
+--------------------------- */
+
+
+/*
+ Variables
+*/
+
+/*** a_Colors ***/
+
+:root {
+  --clr-white1: rgba(255, 255, 255, 1);
+  --clr-green1: rgba(59, 70, 71, 1);
+  --clr-grey1: rgba(238, 238, 238, 1);
+  --clr-grey2: rgba(0, 0, 0, 0.04);
+  --clr-grey3: rgba(0, 0, 0, 0.88);
+  --clr-grey4: rgba(34, 34, 34, 0.4);
+  --clr-black: rgba(0, 0, 0, 1);
+  --clr-none: rgba(0, 0, 0, 0);
+  --clr-mustardyellow: rgba(194, 120, 25, 1);
+
+  --shdw-nav: rgba(34, 34, 34, 0.12);
+  --shdw-card: rgba(0, 0, 0, 0.1);
+}
+
+
+/*** b_Dimensions & interaction ***/
+
+:root {
+  --dmnsn-page: calc(100vw - 16rem);
+  --trnstn-page: 0.125s ease-in;
+}
+
+
+/*
+ Quick settings
+*/
+
+html,
+body {
+  height: 100vh;
+  font-family: "Lato", sans-serif, monospace;
+  font-size: 10px;
+  scroll-behavior: smooth;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+section {
+  width: 100%;
+  margin: 12rem 0 6rem 0;
+}
+
+img {
+  max-width: 100%;
+  margin: 0;
+}
+
+button {
+  background-color: var(--clr-mustardyellow);
+  border: solid 2px;
+  border-radius: 2rem;
+  padding: 1.4rem 1.6rem;
+  width: max-content;
+  cursor: pointer;
+/*  transition: var(--trnstn-page);*/
+  color: var(--clr-white1);
+}
+
+
+/*
+ Fonts
+*/
+
+a {
+ 
+  font-size: 1.6rem;
+  font-weight: 400;
+  text-decoration: none;
+}
+
+#nav-bar a:hover {
+  color: var(--clr-mustardyellow);
+}
+
+a.productDetail:hover {
+  text-decoration: underline;
+}
+
+h1 {
+  font-size: 4vw;
+  font-weight: 900;
+  letter-spacing: 1rem;
+}
+
+h2 {
+  font-size: 2.4rem;
+  font-weight: 300;
+  line-height: 0.5;
+}
+
+h3 {
+  font-size: 4rem;
+  font-weight: 900;
+  letter-spacing: 1rem;
+}
+
+h3::after {
+  position: absolute;
+  top: -25%;
+  text-align: center;
+  color: var(--clr-grey2);
+  font-size: 12rem;
+  font-weight: 900;
+  letter-spacing: 1.4rem;
+}
+
+h4 {
+  font-size: 2.4rem;
+  font-weight: 900;
+  letter-spacing: 1rem;
+}
+
+h5 {
+  font-size: 2.4rem;
+  font-weight: 700;
+}
+
+p {
+  font-size: 1.6rem;
+  font-weight: 400;
+  line-height: 1.6;
+}
+
+button {
+  /* Font only */
+  font-size: 1.8rem;
+  font-weight: 400;
+  text-transform: uppercase;
+}
+
+
+/*
+ Header 
+*/
+
+#heroSection {
+  /*Font color*/
+  color: var(--clr-white1);
+  /*Size & content display*/
+  height: calc(0.5 * 100vw);
+  max-height: 90%;
+  padding: 4rem;
+  display: flex;
+  justify-content: flex-end;
+  /* Settings for the background image*/
+  background-image: url(img/img-hero-Image-2000px.jpg);
+  background-position: left;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+#nav-bar {
+  /* Just to validate the FCC tests... */
+  width: 100%;
+  height: 8rem;
+  position: fixed;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+/*  background-color: transparent;*/
+  /*z-index: 9999;*/
+    background-color: black;
+    z-index: 9999;
+}
+
+#mobileNav,
+#stylingNavBar {
+  /* Shape*/
+  width: var(--dmnsn-page);
+  height: 8rem;
+ /* border-radius: 0.2rem;*/
+  /*Position*/
+  position: fixed;
+  top: 0rem;
+  z-index: 9998;
+  /*Contents position*/
+  padding: 0 4rem;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  /*Color*/
+  /*background-color: var(--clr-grey4);
+  box-shadow: 0 0.9rem 2.1rem 0.7rem var(--shdw-nav);
+  backdrop-filter: blur(5px); /* Not supported by Firefox*/*/
+}
+
+#mobileNav {
+  display: none;
+}
+
+
+#header-img-mobile {
+  width: 9rem;
+}
+
+
+#header-img {
+  width: auto;
+  height: 2.6rem;
+}
+
+
+#navMiddle {
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  padding-top: 0.5rem;
+}
+
+#navMiddle a {
+  /*Font property*/
+  color: var(--clr-white1);
+  text-transform: uppercase;
+  /*Shape & position*/
+  height: 100%;
+  display: flex;
+  align-items: center;
+  padding: 0 2rem;
+  margin: 0 1rem;
+}
+
+a > span {
+  /*Style & position of "NEW" in the nav */
+  font-size: 1rem;
+  font-weight: 300;
+  align-self: start;
+  position: absolute;
+  transform: translate(0%, 150%);
+}
+
+
+/*Navigation Icon Link*/
+
+.navicon-link {
+ padding: 0 10px 0 10px;
+
+}
+
+.navicon-link:link,
+.navicon-link:visited,
+.navicon-link:active {
+   color: var(--clr-white1);
+}
+
+.navicon-link:hover {
+  color: var(--clr-mustardyellow);
+}
+
+
+#heroProductInfo {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  align-self: center;
+}
+
+#heroProductInfo > h5 {
+  margin: 3.2rem 0 1.2rem 0;
+}
+
+#heroProductInfo > p {
+  width: 40rem;
+}
+
+#heroProductInfo > a {
+  margin: 1.2rem 0 3.2rem 0;
+  cursor: pointer;
+}
+
+#heroProductInfo img {
+  height: 1rem;
+  margin-left: 0.6rem;
+}
+
+#heroProductInfo button {
+  color: var(--clr-white1);
+
+}
+
+#heroProductInfo button:hover {
+  background-color: var(--clr-black);
+  border-color: var(--clr-white1);
+}
+
+/*
+ aboutTheArtist
+*/
+
+.theArtist {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.theArtist a:link,
+.theArtist a:visited,
+.theArtist a:active {
+  color: black;
+  text-decoration: none;
+}
+
+.theArtist a:hover {
+  color: var(--clr-mustardyellow);
+}
+
+.name {
+  color: #272c33;
+   display: flex;
+  flex-direction: column;
+  align-items: center;
+
+}
+
+
+
+.my-links {
+
+   /*padding-bottom: 5px;*/
+
+}
+
+
+.theArtist-link {
+ padding: 0 15px 0 15px;
+
+}
+
+.theArtist-link-fcc:link,
+.theArtist-link-fcc:visited,
+.theArtist-link-fcc:active {
+  color: #272c33;
+  font-weight: 900;
+}
+
+.theArtist-link-fcc:hover {
+  color: var(--clr-mustardyellow);
+}
+
+.theArtist-link:link,
+.theArtist-link:visited,
+.theArtist-link:active {
+   color: #272c33;
+}
+
+.theArtist-link:hover {
+  color: var(--clr-mustardyellow);
+}
+
+
+/*
+ Section: allProducts 
+*/
+.sectionHeader {
+  position: relative;
+  width: var(--dmnsn-page);
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+}
+
+.sectionHeader h3 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  text-align: center;
+}
+
+.sectionHeader p {
+  width: 50%;
+  text-align: center;
+  padding: 4rem 0 7.2rem 0;
+}
+
+#product-grid {
+  width: var(--dmnsn-page);
+  margin: 0 auto 12rem auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+  grid-gap: 2rem;
+}
+
+.product-tile {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+  border-radius: 7px;
+  cursor: pointer;
+  padding-bottom: 5rem;
+  transition: var(--trnstn-page);
+
+}
+
+.product-tile:hover {
+  box-shadow: 0 1px 8px 6px var(--shdw-card);
+}
+
+.product-tile h4 {
+  margin: 2.25rem 0 1.5rem 0;
+  letter-spacing: 0.25rem;
+}
+
+.product-tile p {
+  max-width: 80%;
+  margin: 0 auto;
+}
+
+.product-tile h5 {
+  margin: 2.2rem 0;
+}
+
+button:hover {
+  color: var(--clr-white1);
+  background-color: var(--clr-black);
+  border-color: var(--clr-black);
+}
+
+
+/*
+ Section: aboutCats
+*/
+
+#aboutCats, #aboutTheArtist {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#embedded-vid {
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#container-vid {
+  width: 100%;
+  padding: 56.25% 1rem 0 1rem;
+  position: relative;
+}
+
+#container-vid > iframe {
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  position: absolute;
+}
+
+
+/*
+ Footer 
+*/
+
+footer {
+  max-width: var(--dmnsn-page);
+  border-top: solid 0.1rem var(--clr-grey1);
+  margin: 0 auto;
+  padding: 8rem 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+#mailing {
+  width: 35rem;
+}
+
+#mailing p {
+  margin: 1.2rem 0;
+}
+
+#email {
+  height: 4.8rem;
+  width: 29rem;
+  margin: 0;
+  border: none;
+  background-color: var(--clr-grey1);
+  background-image: url("img/icn-mail.png");
+  background-position: 1.6rem 1.6rem;
+  background-repeat: no-repeat;
+  background-size: 2.2rem;
+  padding-left: 5rem;
+}
+
+#submit {
+  height: 4.8rem;
+  width: 4.8rem;
+  border: solid 0.2rem var(--clr-grey1);
+  background-color: var(--clr-white1);
+  margin-left: -0.2rem;
+  background-image: url("img/icn-next-black.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 1.4rem;
+  cursor: pointer;
+  transition: var(--trnstn-page);
+}
+
+#submit:hover {
+  background-image: url(img/icn-next-white.png);
+  background-color: var(--clr-black);
+  border-color: var(--clr-black);
+}
+
+
+
+
+/*
+ Media Query
+*/
+
+@media (max-width: 1000px) {
+  html,
+  body {
+    font-size: 8px;
+  }
+
+  #stylingNavBar {
+    display: none;
+  }
+
+  #mobileNav {
+    /* Shape*/
+    width: 90%;
+    height: 4.8rem;
+    border-radius: 0.2rem;
+    /*Position*/
+    position: fixed;
+    top: 1.6rem;
+    z-index: 9998;
+    /*Contents position*/
+    padding: 0 0.9rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    /*Color*/
+    /*background-color: var(--clr-grey4);
+    box-shadow: 0 0.9rem 2.1rem 0.7rem var(--shdw-nav);
+    backdrop-filter: blur(5px);*/ /* Not supported by Firefox*/
+  }
+}
+
+@media only screen and (max-width: 780px) {
+  html,
+  body {
+    font-size: 9px;
+  }
+
+  #heroSection {
+    /*Size & content display*/
+    width: 100%;
+    height: 76rem;
+    padding: 4rem;
+    display: flex;
+    justify-content: center;
+
+    /* Settings for the background image*/
+    background-image: url(img/img-hero-Image-mbl.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  #heroProductInfo {
+    position: absolute;
+    top: 44rem;
+    width: 90%;
+  }
+
+  #heroSection p {
+    width: 100%;
+    line-height: 1.3;
+  }
+
+  #heroSection h1 {
+    font-size: 4rem;
+    text-align: center;
+  }
+
+  #heroSection h2 {
+    font-size: 2.25rem;
+    text-align: center;
+    margin-bottom: 0.4rem;
+  }
+
+  #heroSection h5 {
+    font-size: 2.25rem;
+    margin: 2.2rem 0 1.2rem 0;
+    text-align: center;
+  }
+
+  #heroSection button {
+    margin: 0 auto;
+  }
+
+  h3 {
+    font-size: 2.8rem;
+  }
+
+  #allProducts p {
+    width: 90%;
+  }
+  
+
+  #product-grid,
+  #embedded-vid {
+    width: 90%;
+  }
+
+  footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  footer a {
+    margin-bottom: 4rem;
+  }
+
+  #mailing {
+    /*width: 35rem;*/
+      display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #mailing h4 {
+    text-align: center;
+  }
+}
+
+
+
+
+
