@@ -16,8 +16,8 @@
 </head>
 
 <body>
-  <!-- freeCodeCamp test suite -->
-  <!-- <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script> -->
+  <!-- freeCodeCamp test suite
+  <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script> -->
 
 <!--
  Header
@@ -94,7 +94,7 @@
         MEOWMITS
       </h1>
       <h5>
-       Sign up and get 10% off
+       Get 10% off today!
       </h5>
       <p>
         Meowmits is a vector art collection featuring feline illustrations that made with love, warmth, and pawesomeness.
@@ -105,7 +105,7 @@
              src="img/icn-next-white.png">
       </a>
       <button>
-        PRE-ORDER NOW
+        Shop Now
       </button>
     </div>
   </div>
@@ -113,18 +113,32 @@
 </header>
 
 <!-- 
- Section: aboutTheArtist
+ Section: aboutCats 
 -->
-<section id="aboutTheArtist">
+<section id="aboutCats">
+
   <div class="sectionHeader">
-    <div class="theArtist">
-      <h3>
-        THE ARTIST MEOWS
-      </h3>
+
+    <h3>
+      THE ARTIST MEOWS
+    </h3>
       <p>
         High quality illustrations created by a real human who love cats.
       </p> 
-     
+
+    <div id="embedded-vid">
+    <div id="container-vid">
+      <iframe 
+              id="video" 
+              max-width="60%" 
+              max-height="60%" 
+              src="https://www.youtube.com/embed/jpsGLsaZKS0" 
+              frameborder="0" 
+              allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" 
+              allowfullscreen>
+      </iframe>
+    </div>
+
     <div class="my-links">
       <a href="https://www.behance.net/plinkysumagyap" target="_blank" class="theArtist-link">
         <i class="fa fa-behance-square fa-4x" aria-hidden="true"></i></a>
@@ -139,9 +153,11 @@
         target="_blank" class="theArtist-link-fcc">freeCodeCamp <i class="fa fa-free-code-camp" aria-hidden="true"></i></a>
       </p>
   </div>
+  
   </div>
-
 </section>
+
+
 
 <!--
  Section: allProducts
@@ -158,30 +174,7 @@
   </div>
   <div id="product-grid">
 
-    <!-- Product 1: Scottish-Straight -->
-    <a class="product-tile">
-      <div>
-        <img 
-             alt="Scottish-Straight Illustration" 
-             src="img/img-product-Scottish-Straight.jpg">
-        <h4>
-          Scottish Straight
-        </h4>
-        <p>
-          Scottish Straight is one of the feline breeds that make up the Scottish Breed Group, along with the beloved Scottish Fold.
-        </p>
-      </div>
-      <div class="productPrice">
-        <h5>
-          $80
-        </h5>
-        <button>
-          PRE-ORDER
-        </button>
-      </div>
-    </a>
-
-    <!-- Product 2: Heterochromia -->
+    <!-- Product 1: Heterochromia -->
     <a class="product-tile">
       <div>
         <img 
@@ -196,13 +189,36 @@
       </div>
       <div class="productPrice">
         <h5>
-          $70
+          10% off
         </h5>
         <button>
-          PRE-ORDER
+          BUY NOW
         </button>
       </div>
 
+    </a>
+
+    <!-- Product 2: Scottish-Straight -->
+    <a class="product-tile">
+      <div>
+        <img 
+             alt="Scottish-Straight Illustration" 
+             src="img/img-product-Scottish-Straight.jpg">
+        <h4>
+          Scottish Straight
+        </h4>
+        <p>
+          Scottish Straight is one of the feline breeds that make up the Scottish Breed Group, along with the beloved Scottish Fold.
+        </p>
+      </div>
+      <div class="productPrice">
+        <h5>
+          10% off
+        </h5>
+        <button>
+          BUY NOW
+        </button>
+      </div>
     </a>
 
     <!-- Product 3: Ragdoll -->
@@ -220,46 +236,15 @@
       </div>
       <div class="productPrice">
         <h5>
-          $60
+          10% off
         </h5>
         <button>
-          PRE-ORDER
+          BUY NOW
         </button>
       </div>
     </a>
   </div>
 </section>
-
-
-<!-- 
- Section: aboutCats 
--->
-<section id="aboutCats">
-
-  <div class="sectionHeader">
-
-    <h3>
-      LET'S MEOW BACK
-    </h3>
-    <p>
-      Wondering how to paint a cat? Let's find out in the video below. 
-    </p>
-  </div>
-  <div id="embedded-vid">
-    <div id="container-vid">
-      <iframe 
-              id="video" 
-              max-width="60%" 
-              max-height="60%" 
-              src="https://www.youtube.com/embed/jpsGLsaZKS0" 
-              frameborder="0" 
-              allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" 
-              allowfullscreen>
-      </iframe>
-    </div>
-  </div>
-</section>
-
 
 
 <!--

@@ -305,6 +305,7 @@ a > span {
 
 #heroProductInfo button {
   color: var(--clr-white1);
+  font-weight: 700;
 
 }
 
@@ -312,6 +313,96 @@ a > span {
   background-color: var(--clr-black);
   border-color: var(--clr-white1);
 }
+
+/*
+ Section: aboutCats
+*/
+
+#aboutCats, #aboutTheArtist {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#embedded-vid {
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#container-vid {
+  width: 100%;
+  padding: 56.25% 1rem 0 1rem;
+  position: relative;
+}
+
+#container-vid > iframe {
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  position: absolute;
+}
+
+
+/*
+ Footer 
+*/
+
+footer {
+  max-width: var(--dmnsn-page);
+  border-top: solid 0.1rem var(--clr-grey1);
+  margin: 0 auto;
+  padding: 8rem 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+#mailing {
+  width: 35rem;
+}
+
+#mailing p {
+  margin: 1.2rem 0;
+}
+
+#email {
+  height: 4.8rem;
+  width: 29rem;
+  margin: 0;
+  border: none;
+  background-color: var(--clr-grey1);
+  background-image: url("img/icn-mail.png");
+  background-position: 1.6rem 1.6rem;
+  background-repeat: no-repeat;
+  background-size: 2.2rem;
+  padding-left: 5rem;
+}
+
+#submit {
+  height: 4.8rem;
+  width: 4.8rem;
+  border: solid 0.2rem var(--clr-grey1);
+  background-color: var(--clr-white1);
+  margin-left: -0.2rem;
+  background-image: url("img/icn-next-black.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 1.4rem;
+  cursor: pointer;
+  transition: var(--trnstn-page);
+}
+
+#submit:hover {
+  background-image: url(img/icn-next-white.png);
+  background-color: var(--clr-black);
+  border-color: var(--clr-black);
+}
+
 
 /*
  aboutTheArtist
@@ -346,7 +437,7 @@ a > span {
 
 .my-links {
 
-   /*padding-bottom: 5px;*/
+   padding-top: 10rem;
 
 }
 
@@ -451,97 +542,6 @@ button:hover {
 }
 
 
-/*
- Section: aboutCats
-*/
-
-#aboutCats, #aboutTheArtist {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-#embedded-vid {
-  width: 60%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-#container-vid {
-  width: 100%;
-  padding: 56.25% 1rem 0 1rem;
-  position: relative;
-}
-
-#container-vid > iframe {
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
-  position: absolute;
-}
-
-
-/*
- Footer 
-*/
-
-footer {
-  max-width: var(--dmnsn-page);
-  border-top: solid 0.1rem var(--clr-grey1);
-  margin: 0 auto;
-  padding: 8rem 0;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-}
-
-#mailing {
-  width: 35rem;
-}
-
-#mailing p {
-  margin: 1.2rem 0;
-}
-
-#email {
-  height: 4.8rem;
-  width: 29rem;
-  margin: 0;
-  border: none;
-  background-color: var(--clr-grey1);
-  background-image: url("img/icn-mail.png");
-  background-position: 1.6rem 1.6rem;
-  background-repeat: no-repeat;
-  background-size: 2.2rem;
-  padding-left: 5rem;
-}
-
-#submit {
-  height: 4.8rem;
-  width: 4.8rem;
-  border: solid 0.2rem var(--clr-grey1);
-  background-color: var(--clr-white1);
-  margin-left: -0.2rem;
-  background-image: url("img/icn-next-black.png");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: 1.4rem;
-  cursor: pointer;
-  transition: var(--trnstn-page);
-}
-
-#submit:hover {
-  background-image: url(img/icn-next-white.png);
-  background-color: var(--clr-black);
-  border-color: var(--clr-black);
-}
-
-
-
 
 /*
  Media Query
@@ -609,6 +609,7 @@ footer {
   #heroSection p {
     width: 100%;
     line-height: 1.3;
+    text-align: center;
   }
 
   #heroSection h1 {
@@ -630,6 +631,10 @@ footer {
 
   #heroSection button {
     margin: 0 auto;
+  }
+
+  .productDetail{
+  	text-align: center;
   }
 
   h3 {
