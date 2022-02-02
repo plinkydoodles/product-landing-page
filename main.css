@@ -281,8 +281,9 @@ a > span {
 #heroProductInfo {
   display: flex;
   flex-direction: column;
-  width: 60%;
+  width: 95%;
   align-self: center;
+  padding-top: 60px;
 }
 
 #heroProductInfo > h5 {
